@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dx1pno2t1v35i"]
+
+[ext_resource type="Script" uid="uid://li85mwmyw7ah" path="res://laser.gd" id="1_jhc5o"]
+[ext_resource type="Texture2D" uid="uid://cmegs1orf4osj" path="res://assets/laser uheartbeast github.com.png" id="2_wcaee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4v5jq"]
+size = Vector2(8, 17)
+
+[node name="Projectile" type="CharacterBody2D" unique_id=48434568]
+script = ExtResource("1_jhc5o")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1929238459]
+texture = ExtResource("2_wcaee")
+
+[node name="Check" type="Area2D" parent="." unique_id=2106261678]
+
+[node name="Collision" type="CollisionShape2D" parent="Check" unique_id=2000263817]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_4v5jq")

@@ -7,6 +7,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8vuu"]
 size = Vector2(14, 14)
 
+[sub_resource type="Gradient" id="Gradient_qhqgy"]
+offsets = PackedFloat32Array(0, 0.08370044, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.69603527, 0.69603527, 0.69603527, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dqkch"]
+gradient = SubResource("Gradient_qhqgy")
+fill_from = Vector2(0.7094017, 1)
+fill_to = Vector2(0.5854701, 0.8418803)
+
 [node name="Player" type="CharacterBody2D" unique_id=1915029882]
 script = ExtResource("1_qhqgy")
 
@@ -26,3 +35,10 @@ position = Vector2(4.2329216e-06, 10)
 texture = ExtResource("2_qhqgy")
 region_enabled = true
 region_rect = Rect2(16, 16, 16, 8)
+
+[node name="Light" type="PointLight2D" parent="." unique_id=669228197]
+position = Vector2(6, 0)
+texture = SubResource("GradientTexture2D_dqkch")
+
+[node name="Shoot Cooldown" type="Timer" parent="." unique_id=1089778930]
+one_shot = true
