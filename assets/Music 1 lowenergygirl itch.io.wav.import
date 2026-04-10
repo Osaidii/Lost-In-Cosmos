@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cjxys1apvy4aa"
+path="res://.godot/imported/Music 1 lowenergygirl itch.io.wav-0bfd4329f946e1addd6b9561b7d6dae4.sample"
+
+[deps]
+
+source_file="res://assets/Music 1 lowenergygirl itch.io.wav"
+dest_files=["res://.godot/imported/Music 1 lowenergygirl itch.io.wav-0bfd4329f946e1addd6b9561b7d6dae4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

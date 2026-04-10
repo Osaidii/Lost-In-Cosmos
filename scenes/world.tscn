@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://jlyujdd31grn"]
+
+[ext_resource type="Texture2D" uid="uid://cjoi2oud5v7yy" path="res://assets/bg uheartbeast github.com.png" id="1_71j4m"]
+[ext_resource type="PackedScene" uid="uid://dnt6swa812ck8" path="res://scenes/camera.tscn" id="1_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://c2hex6e07s40k" path="res://scenes/player.tscn" id="2_4wyf3"]
+[ext_resource type="Texture2D" uid="uid://crm22qr3udhwt" path="res://assets/far stars bg uheartbeast github.com.png" id="2_qfnet"]
+[ext_resource type="Texture2D" uid="uid://d0a6b8d1mcksc" path="res://assets/close stars bg uheartbeast github.com.png" id="3_i7141"]
+
+[node name="World" type="Node2D" unique_id=1408466898]
+
+[node name="Background" type="ParallaxBackground" parent="." unique_id=1551359071]
+scale = Vector2(1.5, 1.5)
+transform = Transform2D(1.5, 0, 0, 1.5, 0, 0)
+
+[node name="Layer 1" type="ParallaxLayer" parent="Background" unique_id=1515326135]
+motion_scale = Vector2(0.25, 0.25)
+motion_mirroring = Vector2(128, 128)
+
+[node name="Texture 1" type="Sprite2D" parent="Background/Layer 1" unique_id=525691522]
+position = Vector2(128, 128)
+texture = ExtResource("1_71j4m")
+
+[node name="Layer 2" type="ParallaxLayer" parent="Background" unique_id=77443586]
+motion_scale = Vector2(0.45, 0.45)
+motion_mirroring = Vector2(128, 128)
+
+[node name="Texture 1" type="Sprite2D" parent="Background/Layer 2" unique_id=1923970623]
+position = Vector2(128, 128)
+texture = ExtResource("2_qfnet")
+
+[node name="Layer 3" type="ParallaxLayer" parent="Background" unique_id=1278099756]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(128, 128)
+
+[node name="Texture" type="Sprite2D" parent="Background/Layer 3" unique_id=743467546]
+z_index = 2
+position = Vector2(128, 128)
+texture = ExtResource("3_i7141")
+
+[node name="Player" parent="." unique_id=1915029882 instance=ExtResource("2_4wyf3")]
+position = Vector2(-332, -98)
+
+[node name="Camera" parent="Player" unique_id=404697834 instance=ExtResource("1_rwgxs")]
+zoom = Vector2(2, 2)
