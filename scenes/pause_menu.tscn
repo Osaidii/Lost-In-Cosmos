@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://b23sprq1x1roe"]
+
+[ext_resource type="Script" uid="uid://h4a3oa1fcsu7" path="res://scripts/pause_menu.gd" id="1_88e76"]
+[ext_resource type="Texture2D" uid="uid://bx0aon58jl8oh" path="res://assets/UI/Exit Buttom.png" id="1_n87rw"]
+[ext_resource type="Texture2D" uid="uid://d4hfnpu7c7sqn" path="res://assets/UI/Buttons/Play.png" id="2_knqa7"]
+[ext_resource type="Texture2D" uid="uid://ccx4g48gltxxi" path="res://assets/UI/Buttons/Play Pressed.png" id="3_71k7c"]
+[ext_resource type="Texture2D" uid="uid://de60v72r8wvf8" path="res://assets/UI/Buttons/Replay.png" id="4_cmnsq"]
+[ext_resource type="Texture2D" uid="uid://dycrubkttj844" path="res://assets/UI/Buttons/Replay Pressed.png" id="5_ofnjo"]
+[ext_resource type="Texture2D" uid="uid://ui31128ct2ps" path="res://assets/UI/Buttons/Sound Button.png" id="6_1rgno"]
+[ext_resource type="Texture2D" uid="uid://dhgcmwh33otwm" path="res://assets/UI/Buttons/Music.png" id="7_4hnlu"]
+[ext_resource type="Texture2D" uid="uid://cs5mgp2lqxp4f" path="res://assets/UI/Buttons/Sound Pressed.png" id="9_71k7c"]
+[ext_resource type="Texture2D" uid="uid://8gngl300ky2g" path="res://assets/UI/Buttons/Music Pressed.png" id="10_cmnsq"]
+
+[node name="Pause Menu" type="Control" unique_id=44025782]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_88e76")
+
+[node name="Margins" type="MarginContainer" parent="." unique_id=1299406800]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.47, 0.47)
+theme_override_constants/margin_left = 26
+theme_override_constants/margin_top = 350
+
+[node name="Buttons" type="VBoxContainer" parent="Margins" unique_id=1007777921]
+layout_mode = 2
+
+[node name="Resume" type="TextureButton" parent="Margins/Buttons" unique_id=1915139250]
+layout_mode = 2
+texture_normal = ExtResource("2_knqa7")
+texture_pressed = ExtResource("3_71k7c")
+
+[node name="Replay" type="TextureButton" parent="Margins/Buttons" unique_id=660391115]
+layout_mode = 2
+texture_normal = ExtResource("4_cmnsq")
+texture_pressed = ExtResource("5_ofnjo")
+
+[node name="Sound" type="TextureButton" parent="Margins/Buttons" unique_id=715757669]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("6_1rgno")
+
+[node name="Music" type="TextureButton" parent="Margins/Buttons" unique_id=444132236]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("7_4hnlu")
+
+[node name="Exit Margin" type="MarginContainer" parent="." unique_id=731205509]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.69, 0.69)
+theme_override_constants/margin_left = 1436
+theme_override_constants/margin_top = 917
+
+[node name="Exit" type="TextureButton" parent="Exit Margin" unique_id=1150469574]
+layout_mode = 2
+texture_normal = ExtResource("1_n87rw")
+
+[node name="Buttons Overlay" type="VBoxContainer" parent="." unique_id=474710197]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 363.99997
+offset_right = 222.0
+offset_bottom = 1644.0
+scale = Vector2(0.47, 0.47)
+
+[node name="Sound Enabled" type="TextureButton" parent="Buttons Overlay" unique_id=572090370]
+layout_mode = 2
+texture_normal = ExtResource("9_71k7c")
+
+[node name="Music Enabled" type="TextureButton" parent="Buttons Overlay" unique_id=2128105486]
+layout_mode = 2
+texture_normal = ExtResource("10_cmnsq")
+
+[connection signal="pressed" from="Margins/Buttons/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Margins/Buttons/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="Margins/Buttons/Sound" to="." method="_on_sound_pressed"]
+[connection signal="pressed" from="Margins/Buttons/Music" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="Exit Margin/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Buttons Overlay/Sound Enabled" to="." method="_on_sound_enabled_pressed"]
+[connection signal="pressed" from="Buttons Overlay/Music Enabled" to="." method="_on_music_enabled_pressed"]

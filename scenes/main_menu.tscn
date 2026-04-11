@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://b8boc67niqf25" path="res://scripts/main_menu.gd" id="1_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://crm22qr3udhwt" path="res://assets/far stars bg uheartbeast github.com.png" id="2_wu84c"]
 [ext_resource type="Texture2D" uid="uid://d0a6b8d1mcksc" path="res://assets/close stars bg uheartbeast github.com.png" id="3_8ln24"]
-[ext_resource type="Texture2D" uid="uid://bhrl5uussvtd4" path="res://assets/UI Free Game Assets itch.io/Start Button.png" id="4_8ln24"]
-[ext_resource type="Texture2D" uid="uid://bx0aon58jl8oh" path="res://assets/UI Free Game Assets itch.io/Exit Buttom.png" id="5_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://bhrl5uussvtd4" path="res://assets/UI/Start Button.png" id="4_8ln24"]
+[ext_resource type="Texture2D" uid="uid://bx0aon58jl8oh" path="res://assets/UI/Exit Buttom.png" id="5_rtw2f"]
 [ext_resource type="PackedScene" uid="uid://c2hex6e07s40k" path="res://scenes/player.tscn" id="7_oa1go"]
 [ext_resource type="FontFile" uid="uid://bocb13hcj1xll" path="res://assets/kenney mini square uheartbeast github.com.ttf" id="8_tbmy8"]
 

@@ -9,8 +9,6 @@ size = Vector2(14, 14)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=1915029882]
 script = ExtResource("1_4ra3w")
-SPEED = null
-COOLDOWN = null
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=57304910]
 rotation = 1.5707964

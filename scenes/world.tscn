@@ -3,9 +3,116 @@
 [ext_resource type="Texture2D" uid="uid://cjoi2oud5v7yy" path="res://assets/bg uheartbeast github.com.png" id="1_71j4m"]
 [ext_resource type="PackedScene" uid="uid://dnt6swa812ck8" path="res://scenes/camera.tscn" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://c2hex6e07s40k" path="res://scenes/player.tscn" id="2_4wyf3"]
+[ext_resource type="Texture2D" uid="uid://bfcei5w41h77o" path="res://assets/Window for Coins.png" id="2_pm21f"]
 [ext_resource type="Texture2D" uid="uid://crm22qr3udhwt" path="res://assets/far stars bg uheartbeast github.com.png" id="2_qfnet"]
+[ext_resource type="Texture2D" uid="uid://bd6ogg76dim1p" path="res://assets/coin.png" id="3_2lf6f"]
 [ext_resource type="Texture2D" uid="uid://d0a6b8d1mcksc" path="res://assets/close stars bg uheartbeast github.com.png" id="3_i7141"]
+[ext_resource type="FontFile" uid="uid://bocb13hcj1xll" path="res://assets/kenney mini square uheartbeast github.com.ttf" id="4_7iits"]
 [ext_resource type="PackedScene" uid="uid://be4s0tb5m7mmf" path="res://scenes/enemy.tscn" id="6_qfnet"]
+[ext_resource type="Texture2D" uid="uid://degrxk2fquvaf" path="res://assets/UI/Buttons/Pause.png" id="7_i7141"]
+[ext_resource type="Script" uid="uid://h4a3oa1fcsu7" path="res://scripts/pause_menu.gd" id="8_7t5mc"]
+[ext_resource type="Texture2D" uid="uid://d4hfnpu7c7sqn" path="res://assets/UI/Buttons/Play.png" id="9_lakw3"]
+[ext_resource type="Texture2D" uid="uid://ccx4g48gltxxi" path="res://assets/UI/Buttons/Play Pressed.png" id="10_pm21f"]
+[ext_resource type="Texture2D" uid="uid://de60v72r8wvf8" path="res://assets/UI/Buttons/Replay.png" id="11_2lf6f"]
+[ext_resource type="Texture2D" uid="uid://dycrubkttj844" path="res://assets/UI/Buttons/Replay Pressed.png" id="12_7iits"]
+[ext_resource type="Texture2D" uid="uid://ui31128ct2ps" path="res://assets/UI/Buttons/Sound Button.png" id="13_oo54l"]
+[ext_resource type="Texture2D" uid="uid://dhgcmwh33otwm" path="res://assets/UI/Buttons/Music.png" id="14_kpybi"]
+[ext_resource type="Texture2D" uid="uid://bx0aon58jl8oh" path="res://assets/UI/Exit Buttom.png" id="15_ctatt"]
+[ext_resource type="Texture2D" uid="uid://cs5mgp2lqxp4f" path="res://assets/UI/Buttons/Sound Pressed.png" id="16_xgqkh"]
+[ext_resource type="Texture2D" uid="uid://8gngl300ky2g" path="res://assets/UI/Buttons/Music Pressed.png" id="17_munwf"]
+[ext_resource type="Shader" uid="uid://dhe8ht5tacnke" path="res://storage/blur.tres" id="18_lakw3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnclc"]
+atlas = ExtResource("3_2lf6f")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h503x"]
+atlas = ExtResource("3_2lf6f")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ks1h8"]
+atlas = ExtResource("3_2lf6f")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtpxx"]
+atlas = ExtResource("3_2lf6f")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtlye"]
+atlas = ExtResource("3_2lf6f")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iuh54"]
+atlas = ExtResource("3_2lf6f")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfkyu"]
+atlas = ExtResource("3_2lf6f")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pjlt"]
+atlas = ExtResource("3_2lf6f")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nd8r0"]
+atlas = ExtResource("3_2lf6f")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nry6"]
+atlas = ExtResource("3_2lf6f")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8d8rw"]
+atlas = ExtResource("3_2lf6f")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8gqk"]
+atlas = ExtResource("3_2lf6f")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7iits"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnclc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h503x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ks1h8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtpxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtlye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iuh54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfkyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pjlt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nd8r0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nry6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8d8rw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8gqk")
+}],
+"loop": true,
+"name": &"coin",
+"speed": 6.0
+}]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_71j4m"]
 
@@ -17,9 +124,135 @@ _data = {
 &"RESET": SubResource("Animation_qfnet")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oo54l"]
+shader = ExtResource("18_lakw3")
+shader_parameter/LOD = 0.5
+
+[sub_resource type="Animation" id="Animation_lakw3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/Blur:material:shader_parameter/LOD")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pm21f"]
+resource_name = "on"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Blur:material:shader_parameter/LOD")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5, 0.5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2lf6f"]
+_data = {
+&"RESET": SubResource("Animation_lakw3"),
+&"on": SubResource("Animation_pm21f")
+}
+
 [node name="World" type="Node2D" unique_id=1408466898]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=2108909061]
+
+[node name="Pause" type="MarginContainer" parent="UI" unique_id=915980272]
+offset_right = 228.0
+offset_bottom = 228.0
+scale = Vector2(0.3, 0.3)
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+
+[node name="Pause" type="TextureButton" parent="UI/Pause" unique_id=966258846]
+layout_mode = 2
+texture_normal = ExtResource("7_i7141")
+
+[node name="Coins" type="MarginContainer" parent="UI" unique_id=656887673]
+offset_left = 1222.0
+offset_top = 29.0
+offset_right = 1262.0
+offset_bottom = 69.0
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/Coins" unique_id=2025142083]
+position = Vector2(-41, 12)
+scale = Vector2(1.945, 1.945)
+texture = ExtResource("2_pm21f")
+
+[node name="Rotation" type="AnimatedSprite2D" parent="UI/Coins" unique_id=354031967]
+position = Vector2(-112, 12)
+scale = Vector2(3.185, 3.185)
+sprite_frames = SubResource("SpriteFrames_7iits")
+animation = &"coin"
+autoplay = "coin"
+frame_progress = 0.50243425
+
+[node name="Slash" type="Label" parent="UI/Coins/Rotation" unique_id=75361996]
+offset_left = 23.547888
+offset_top = -12.244898
+offset_right = 63.54789
+offset_bottom = 59.755104
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "/"
+
+[node name="Required" type="Label" parent="UI/Coins/Rotation" unique_id=2073488809]
+offset_left = 20.722145
+offset_top = -5.337518
+offset_right = 60.722157
+offset_bottom = 66.66248
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_7iits")
+theme_override_font_sizes/font_size = 8
+text = "500"
+horizontal_alignment = 1
+
+[node name="Coins" type="Label" parent="UI/Coins/Rotation" unique_id=1103419507]
+offset_left = -4.3956003
+offset_top = -5.023548
+offset_right = 35.6044
+offset_bottom = 66.976456
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_7iits")
+theme_override_font_sizes/font_size = 8
+text = "500"
+horizontal_alignment = 1
 
 [node name="Background" type="ParallaxBackground" parent="." unique_id=1551359071]
 scale = Vector2(2, 2)
@@ -146,8 +379,119 @@ script = null
 
 [node name="Enemy" parent="." unique_id=1915029882 instance=ExtResource("6_qfnet")]
 position = Vector2(-366, -262)
-SPEED = 150.0
-COOLDOWN = 0.1
 
 [node name="Animations" type="AnimationPlayer" parent="." unique_id=597642054]
 libraries/ = SubResource("AnimationLibrary_4mrxx")
+
+[node name="Pause Menu" type="CanvasLayer" parent="." unique_id=1645506318]
+process_mode = 3
+script = ExtResource("8_7t5mc")
+
+[node name="UI" type="Control" parent="Pause Menu" unique_id=357781289]
+process_mode = 3
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Blur" type="ColorRect" parent="Pause Menu/UI" unique_id=1153784371]
+process_mode = 3
+material = SubResource("ShaderMaterial_oo54l")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 32.075
+anchor_bottom = 18.2
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Exit Margin" type="MarginContainer" parent="Pause Menu/UI" unique_id=731205509]
+process_mode = 3
+layout_mode = 0
+offset_right = 1846.0
+offset_bottom = 1038.0
+scale = Vector2(0.69, 0.69)
+theme_override_constants/margin_left = 1436
+theme_override_constants/margin_top = 917
+
+[node name="Exit" type="TextureButton" parent="Pause Menu/UI/Exit Margin" unique_id=1150469574]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("15_ctatt")
+
+[node name="Sound Enabled" type="TextureButton" parent="Pause Menu/UI" unique_id=572090370]
+process_mode = 3
+layout_mode = 0
+offset_left = 12.22
+offset_top = 359.0
+offset_right = 222.22
+offset_bottom = 569.0
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("16_xgqkh")
+
+[node name="Music Enabled" type="TextureButton" parent="Pause Menu/UI" unique_id=2128105486]
+process_mode = 3
+layout_mode = 0
+offset_left = 12.22
+offset_top = 456.0
+offset_right = 222.22
+offset_bottom = 666.0
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("17_munwf")
+
+[node name="Resume" type="TextureButton" parent="Pause Menu/UI" unique_id=1915139250]
+process_mode = 3
+layout_mode = 0
+offset_left = 12.22
+offset_top = 164.5
+offset_right = 222.22
+offset_bottom = 374.5
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("9_lakw3")
+texture_pressed = ExtResource("10_pm21f")
+
+[node name="Replay" type="TextureButton" parent="Pause Menu/UI" unique_id=660391115]
+process_mode = 3
+layout_mode = 0
+offset_left = 12.22
+offset_top = 263.0
+offset_right = 222.22
+offset_bottom = 473.0
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("11_2lf6f")
+texture_pressed = ExtResource("12_7iits")
+
+[node name="Sound" type="TextureButton" parent="Pause Menu/UI" unique_id=715757669]
+process_mode = 3
+visible = false
+layout_mode = 0
+offset_left = 12.22
+offset_top = 360.0
+offset_right = 222.22
+offset_bottom = 570.0
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("13_oo54l")
+
+[node name="Music" type="TextureButton" parent="Pause Menu/UI" unique_id=444132236]
+process_mode = 3
+visible = false
+layout_mode = 0
+offset_left = 12.22
+offset_top = 456.0
+offset_right = 222.22
+offset_bottom = 666.0
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("14_kpybi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pause Menu" unique_id=727049463]
+process_mode = 3
+libraries/ = SubResource("AnimationLibrary_2lf6f")
+
+[connection signal="pressed" from="UI/Pause/Pause" to="Pause Menu" method="_on_pause_pressed"]
+[connection signal="pressed" from="Pause Menu/UI/Exit Margin/Exit" to="Pause Menu" method="_on_exit_pressed"]
+[connection signal="pressed" from="Pause Menu/UI/Sound Enabled" to="Pause Menu" method="_on_sound_enabled_pressed"]
+[connection signal="pressed" from="Pause Menu/UI/Music Enabled" to="Pause Menu" method="_on_music_enabled_pressed"]
+[connection signal="pressed" from="Pause Menu/UI/Resume" to="Pause Menu" method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause Menu/UI/Replay" to="Pause Menu" method="_on_replay_pressed"]
+[connection signal="pressed" from="Pause Menu/UI/Sound" to="Pause Menu" method="_on_sound_pressed"]
+[connection signal="pressed" from="Pause Menu/UI/Music" to="Pause Menu" method="_on_music_pressed"]

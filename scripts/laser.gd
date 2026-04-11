@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _on_check_body_entered(body: Node2D) -> void:
-	if body is CharacterBody2D and body != EXCLUDE:
+	if body is CharacterBody2D and body != EXCLUDE and body.is_alive:
 		body.die()
 		var instance  = explosion.instantiate()
 		instance.global_position = global_position
