@@ -5,16 +5,25 @@
 [ext_resource type="PackedScene" uid="uid://c2hex6e07s40k" path="res://scenes/player.tscn" id="2_4wyf3"]
 [ext_resource type="Texture2D" uid="uid://crm22qr3udhwt" path="res://assets/far stars bg uheartbeast github.com.png" id="2_qfnet"]
 [ext_resource type="Texture2D" uid="uid://d0a6b8d1mcksc" path="res://assets/close stars bg uheartbeast github.com.png" id="3_i7141"]
+[ext_resource type="PackedScene" uid="uid://be4s0tb5m7mmf" path="res://scenes/enemy.tscn" id="6_qfnet"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_71j4m"]
+
+[sub_resource type="Animation" id="Animation_qfnet"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4mrxx"]
+_data = {
+&"RESET": SubResource("Animation_qfnet")
+}
 
 [node name="World" type="Node2D" unique_id=1408466898]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=2108909061]
 
 [node name="Background" type="ParallaxBackground" parent="." unique_id=1551359071]
-scale = Vector2(1.5, 1.5)
-transform = Transform2D(1.5, 0, 0, 1.5, 0, 0)
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
 
 [node name="Layer 1" type="ParallaxLayer" parent="Background" unique_id=1515326135]
 motion_scale = Vector2(0.25, 0.25)
@@ -22,29 +31,111 @@ motion_mirroring = Vector2(128, 128)
 
 [node name="Texture 1" type="Sprite2D" parent="Background/Layer 1" unique_id=525691522]
 material = SubResource("CanvasItemMaterial_71j4m")
-position = Vector2(128, 128)
+position = Vector2(0, 64)
+texture = ExtResource("1_71j4m")
+
+[node name="Texture 2" type="Sprite2D" parent="Background/Layer 1" unique_id=1564273421]
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(-256, 64)
+texture = ExtResource("1_71j4m")
+
+[node name="Texture 3" type="Sprite2D" parent="Background/Layer 1" unique_id=1243977640]
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(256, 64)
+texture = ExtResource("1_71j4m")
+
+[node name="Texture 4" type="Sprite2D" parent="Background/Layer 1" unique_id=1893659225]
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(0, 192)
+texture = ExtResource("1_71j4m")
+
+[node name="Texture 5" type="Sprite2D" parent="Background/Layer 1" unique_id=1947538543]
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(-256, 192)
+texture = ExtResource("1_71j4m")
+
+[node name="Texture 6" type="Sprite2D" parent="Background/Layer 1" unique_id=1819800750]
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(256, 192)
 texture = ExtResource("1_71j4m")
 
 [node name="Layer 2" type="ParallaxLayer" parent="Background" unique_id=77443586]
+position = Vector2(0, 64)
 motion_scale = Vector2(0.45, 0.45)
 motion_mirroring = Vector2(128, 128)
 
 [node name="Texture 1" type="Sprite2D" parent="Background/Layer 2" unique_id=1923970623]
 material = SubResource("CanvasItemMaterial_71j4m")
-position = Vector2(128, 128)
+position = Vector2(0, 192)
+texture = ExtResource("2_qfnet")
+
+[node name="Texture 2" type="Sprite2D" parent="Background/Layer 2" unique_id=614551327]
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(-256, 192)
+texture = ExtResource("2_qfnet")
+
+[node name="Texture 3" type="Sprite2D" parent="Background/Layer 2" unique_id=226329912]
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(256, 192)
+texture = ExtResource("2_qfnet")
+
+[node name="Texture 4" type="Sprite2D" parent="Background/Layer 2" unique_id=619384717]
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(0, 64)
+texture = ExtResource("2_qfnet")
+
+[node name="Texture 5" type="Sprite2D" parent="Background/Layer 2" unique_id=1680929140]
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(-256, 64)
+texture = ExtResource("2_qfnet")
+
+[node name="Texture 6" type="Sprite2D" parent="Background/Layer 2" unique_id=461440200]
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(256, 64)
 texture = ExtResource("2_qfnet")
 
 [node name="Layer 3" type="ParallaxLayer" parent="Background" unique_id=1278099756]
+position = Vector2(0, 64)
 motion_scale = Vector2(0.9, 0.9)
 motion_mirroring = Vector2(128, 128)
 
 [node name="Texture" type="Sprite2D" parent="Background/Layer 3" unique_id=743467546]
 z_index = 2
 material = SubResource("CanvasItemMaterial_71j4m")
-position = Vector2(128, 128)
+position = Vector2(0, 64)
 texture = ExtResource("3_i7141")
 
-[node name="Player" parent="." unique_id=1915029882 instance=ExtResource("2_4wyf3")]
+[node name="Texture2" type="Sprite2D" parent="Background/Layer 3" unique_id=899790819]
+z_index = 2
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(-256, 64)
+texture = ExtResource("3_i7141")
+
+[node name="Texture3" type="Sprite2D" parent="Background/Layer 3" unique_id=110032178]
+z_index = 2
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(256, 64)
+texture = ExtResource("3_i7141")
+
+[node name="Texture4" type="Sprite2D" parent="Background/Layer 3" unique_id=156206626]
+z_index = 2
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(0, 192)
+texture = ExtResource("3_i7141")
+
+[node name="Texture5" type="Sprite2D" parent="Background/Layer 3" unique_id=1596628020]
+z_index = 2
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(-256, 192)
+texture = ExtResource("3_i7141")
+
+[node name="Texture6" type="Sprite2D" parent="Background/Layer 3" unique_id=336097691]
+z_index = 2
+material = SubResource("CanvasItemMaterial_71j4m")
+position = Vector2(256, 192)
+texture = ExtResource("3_i7141")
+
+[node name="Player" parent="." unique_id=1062914096 instance=ExtResource("2_4wyf3")]
 position = Vector2(-332, -98)
 
 [node name="Camera" parent="Player" unique_id=404697834 instance=ExtResource("1_rwgxs")]
@@ -52,3 +143,11 @@ zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 script = null
+
+[node name="Enemy" parent="." unique_id=1915029882 instance=ExtResource("6_qfnet")]
+position = Vector2(-366, -262)
+SPEED = 150.0
+COOLDOWN = 0.1
+
+[node name="Animations" type="AnimationPlayer" parent="." unique_id=597642054]
+libraries/ = SubResource("AnimationLibrary_4mrxx")
