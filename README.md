@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-hehe
-=======
-hehe
->>>>>>> 83d2cf0f4061b8dd16bb3bf4607b847bd25ef3fc
+This is the project and source files of the game that is present in the repository Lost in Cosmos in the Same Account!  
+Free to Play, Free to USE!  
+These files are meant to be used in Godot Engine!  
+There is a plugin called Hackatime that is a time tracking tool used by Hack Club! It might cause problems if not set up properly, please disable it in Project Setting and then Plugins!  
